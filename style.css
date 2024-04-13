@@ -1,0 +1,493 @@
+:root {
+    --primary: #588877;
+    --second: #ffc0c0;
+    --thrid: #fcdddd;
+    --bg: #F1FADA;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.headBar {
+    padding: 12px;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 18px 25px;
+    margin-bottom: 0;
+    gap: 18px 55px;
+}
+
+.inputSection{
+    order: 0;
+}
+
+.books {
+    order: 1;
+}
+
+.searchSection {
+    order: -1;
+}
+
+.inputSection {
+    display: flex;
+    height: 500px;
+    width: 31%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    padding: 10px 55px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.inputSection > h2 {
+    text-align: center;
+    color: var(--second);
+}
+
+.inputSection > form{
+   display: block;
+   width: 100%;
+}
+
+.inputSection > form > button {
+    background-color: var(--primary);
+    border: 1px solid var(--second);
+    color: var(--second);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.inputSection > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary);
+    border: 1px solid var(--second);
+    color: var(--second);
+    font-weight: 400;
+    font-size: 20PX;
+    border-radius: 2px;
+}
+
+.inputSection > form > .input > input:focus {
+    border: 1px solid var(--second);
+    outline-style: none;
+    text-decoration: underline dotted var(--bg);
+}
+
+.inputSection > form > .input > label {
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    margin: 9px 0 8px 0;
+}
+
+.inputSection > form > .radioButton {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+.inputSection > form > .radioButton > .inputInline {
+    width: 50%;
+    height: 40px;
+    display: inline-block;
+    margin: 20px 3.5px 30px 2.5px;
+}
+
+.inputSection > form > .radioButton > .inputInline > label {
+    color: var(--bg);
+    font-size: 15px;
+    width: 100%;
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+.searchSection {
+    width: 65%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px 5PX;
+    background-color: var(--primary);
+    border-radius: 25px;
+}
+
+.searchSection > form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.searchSection > form > input {
+    display: block;
+    width: 90%;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 20px;
+    background-color: var(--bg);
+    color: var(--primary);
+    border-style: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.searchSection > form > input:focus {
+    outline-style: none;
+    text-decoration: underline dotted var(--primary);
+}
+
+.searchSection > form > button {
+    background-color: rgba(255, 255, 255, 0);
+    display: block;
+    width: 10%;
+    padding: 2px;
+    border: 0;
+    cursor: pointer;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    height: 75vh;
+    justify-content: flex-start;
+}
+
+.bookShelf {
+    display: block;
+    width: 100%;
+    height:196px;
+    border-radius: 8px;
+    background-color: var(--thrid);
+    overflow: auto;
+    border: 1px solid var(--primary);
+    box-shadow: 0px 0px 5px 0.5px #588877;
+}
+
+.books > h2 {
+    color: var(--primary);
+    margin-top: 19px;
+    margin-bottom: 8px;
+}
+
+.books > .uncompleted {
+    margin-top: 0;
+}
+
+.bookShelf > .bookList {
+    padding: 10px 20px;
+}
+
+.bookShelf > .bookList > .bookItem {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 8.5px 16px 16px 16px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--second);
+    margin: 10px 0;
+}
+
+.bookShelf > .bookList > .bookItem > .bio {
+    display: block;
+    width: 54%;
+    overflow: hidden;
+}
+
+.bookItem > p {
+    font-weight: 600;
+}
+
+.bio h3 {
+    white-space: nowrap;
+    color: #000000;
+    font-weight: 700;
+    margin-top: -4px;
+}
+
+.bio p {
+    color: #414040;
+    font-weight: 600;
+    margin-top: -5px;
+}
+
+.bookShelf > .bookList > .bookItem > .action {
+    display: flex;
+    justify-content: space-between;
+    width: 13.5%;
+}
+
+.bookShelf > .bookList > .bookItem > .action > button {
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: var(--second);
+}
+
+.action > .tick, .action > .trash {
+    display: flex;
+}
+
+#notification {
+    display: none;
+}
+
+#notification.active {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -64px;
+    backdrop-filter: blur(1px);
+    background-color: #00000062;
+    z-index: 999999;
+}
+
+#popUp {
+    display: flex;
+    height: 330px;
+    width: 370px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    box-shadow: 3px 3px 5px 1px #456d5f;
+    border-radius: 4px;
+    gap: 16px;
+}
+
+#popUp > .trashVector {
+    width: 50%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(assets/trashVector.png);
+}
+
+#popUp > #exit {
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    align-self: flex-end;
+    background-color: #e92a2a;
+    border: 5px solid var(--bg);
+    border-radius: 100%;
+    margin-top: -315px;
+    margin-right: -15px;
+    cursor: pointer;
+}
+
+#popUp > p {
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--primary);
+}
+
+#popUp > .choice {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+#popUp > .choice > button {
+    display: block;
+    width: 90px;
+    font-weight: 600;
+    color: var(--bg);
+    cursor: pointer;
+}
+
+#popUp > .choice > #confirmDeleteButton {
+    background-color: var(--primary);
+    border: 2px solid #3e6356;
+}
+
+#popUp > .choice > #cancelDeleteButton {
+    background-color: #e92a2a;
+    border: 2px solid #9c1c1c;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 18px 0;
+        gap: 18px 30px;
+    }
+    #notification.active {
+        margin-top: -56.5px;
+    }
+    .inputSection {
+        width: 38%;
+        padding: 15px 38px;
+    }
+    .bookShelf > .bookList > .bookItem > .action {
+        width: 17%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        gap: 18px 25px;
+    }
+    .inputSection {
+        width: 38%;
+        padding: 15px 25px;
+    }
+    .bookShelf > .bookList > .bookItem > .bio {
+        width: 48%;
+    }
+    .bookShelf > .bookList > .bookItem > .action {
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .inputSection {
+        width: 43%;
+        padding: 15px 25px;
+    }
+    .inputSection > h2 {
+        font-size: 20px;
+    }
+    .inputSection > form > .radioButton > .inputInline > label {
+        font-size: 12px;
+    }
+    .books {
+        width: 48%;
+    }
+    .searchSection > form > input {
+        width: 88%;
+    }
+    .searchSection > form > button {
+        width: 12%;
+    }
+    .bookShelf > .bookList > .bookItem > .bio {
+        width: 44%;
+    }
+    .bookShelf > .bookList > .bookItem > .action {
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .head_bar > h1 {
+        font-size: 25px;
+    }
+    .inputSection {
+        width: 80%;
+        height: 550px;
+        padding: 10px 40px;
+    }
+    .inputSection > h2 {
+        font-size: 25px;
+    }
+    .inputSection > form > .radioButton > .inputInline > label {
+        font-size: 15px;
+    }
+    .inputSection > form > .radioButton > .inputInline {
+        margin-left: 25px;
+    }
+    .books {
+        width: 80%;
+    }
+    .bookShelf {
+        height:300px;
+    }
+    .searchSection > form > input {
+        width: 85%;
+
+    }
+    .searchSection > form > button {
+        width: 15%;
+    }
+    .bookShelf > .bookList > .bookItem > .action {
+        width: 17%;
+    }
+}
+
+ @media screen and (max-width: 460px) {
+    .searchSection > form > input {
+        width: 80%;
+    }
+    .searchSection > form > button {
+        width: 20%;
+    }
+    .inputSection {
+        width: 90%;
+        padding: 10px 20px;
+    }
+    .inputSection > h2 {
+        font-size: 23px;
+    }
+    .inputSection > form > .radioButton > .inputInline > label {
+        font-size: 12px;
+    }
+    .books {
+        width: 90%;
+    }
+    .bookShelf > .bookList {
+        padding: 10px 15px;
+    }
+    .bookShelf > .bookList > .bookItem > .action {
+        width: 23%;
+    }
+    #notification.active {
+        padding: 0 12%;
+    }
+    #popUp {
+        height: 300px;
+        gap: 10px;
+    }
+    #popUp > #exit {
+        margin-top: -285px;
+    }
+    #popUp > p {
+        display: block;
+        font-size: 15px;
+    }
+}

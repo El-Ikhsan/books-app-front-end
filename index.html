@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Bookshelf Apps</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="headBar">
+  <h1>Bookshelf Apps</h1>
+</header>
+<main>
+  <aside class="inputSection">
+    <h2>Masukkan Buku Baru</h2>
+    <form id="inputBook">
+      <div class="input">
+        <label for="inputBookTitle">Judul</label>
+        <input id="inputBookTitle" name="title" type="text" required>
+      </div>
+      <div class="input">
+        <label for="inputBookAuthor">Penulis</label>
+        <input id="inputBookAuthor" name="author" type="text" required>
+      </div>
+      <div class="input">
+        <label for="inputBookYear">Tahun</label>
+        <input id="inputBookYear" name="year" type="text" pattern="\d{4}" title="Masukkan tahun dengan format angka empat digit (contoh: 2024)" required>
+      </div>
+      <section class="radioButton">
+        <div class="inputInline">
+          <label for="inputBookIsUncomplete">Belum dibaca</label>
+          <input id="inputBookIsUncomplete" name="bookStatus" type="radio">
+        </div>
+        <div class="inputInline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" name="bookStatus" type="radio">
+        </div>
+      </section>
+      <button id="bookSubmit" type="submit">Masukkan Buku</button>
+    </form>
+  </aside>
+  
+  <section class="searchSection">
+    <form id="searchBook">
+      <input id="searchBookTitle" type="text">
+      <button id="searchSubmit" type="submit"><img src="assets/search.png"></button>
+    </form>
+  </section>
+  
+<article class="books">
+  <h2 class="uncompleted">Belum selesai dibaca</h2>
+  <section class="bookShelf">
+    <div id="uncompleteBookshelfList" class="bookList"></div>
+  </section>
+  
+  <h2>Selesai dibaca</h2>
+  <section class="bookShelf">
+    <div id="completeBookshelfList" class="bookList"></div>
+  </section>
+</article>
+
+<article id="notification">
+  <div id="popUp">
+    <button id="exit"><img src="assets/cross.png"></button>
+    <p>yakin mau menghapus buku ini?</p>
+    <figure class="trashVector"></figure>
+    <section class="choice">
+      <button id="confirmDeleteButton">Ya</button>
+      <button id="cancelDeleteButton">Tidak</button>
+    </section>
+  </div>
+</article>
+</main>
+
+<script src="script.js" type="text/javascript"></script>
+</body>
+</html>
